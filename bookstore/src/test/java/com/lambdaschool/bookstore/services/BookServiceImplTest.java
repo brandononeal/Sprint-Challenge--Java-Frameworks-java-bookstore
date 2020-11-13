@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = BookstoreApplication.class)
 //**********
@@ -36,28 +38,33 @@ public class BookServiceImplTest
     }
 
     @Test
-    public void findAll()
+    public void findAll() throws Exception
     {
+        assertEquals("Flatterland", bookService.findBookById(26).getTitle());
     }
 
     @Test
     public void findBookById()
     {
+        //
     }
 
     @Test(expected = ResourceNotFoundException.class)
     public void notFindBookById()
     {
+        //
     }
 
     @Test
     public void delete()
     {
+        //
     }
 
     @Test
     public void save()
     {
+        //
     }
 
     @Test
